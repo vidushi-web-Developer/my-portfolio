@@ -1,5 +1,6 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://vidushi-web-Developer.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +11,7 @@
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "gh-pages": "^6.2.0",
     "mongoose": "^8.8.2",
     "node": "^18.20.5",
     "react": "^18.3.1",
@@ -21,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
