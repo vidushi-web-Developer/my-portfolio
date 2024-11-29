@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route} from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About"
 import Main from "./Components/Main";
@@ -11,7 +11,7 @@ import Greeting from './Components/Greeting';
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/home' element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path='/footer' element={<Footer />} />
         <Route path='/greeting' element={<Greeting />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </div>
   );
 }
