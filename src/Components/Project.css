@@ -1,0 +1,154 @@
+.project {
+    background: #131212;
+    color: #ffffff;
+    padding: 40px 20px;
+  }
+  .project-box{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project .heading{
+    margin-bottom: 5rem;
+    
+  }
+  
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+
+  }
+  .project-item{
+   height: 450px;
+    max-width: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(238, 238, 238, 0.2);
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 30px 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    color: white;
+    transition: 0.4s ease-in-out;
+  }
+  .project-item:hover{
+    border: 3px solid #01e0ca;
+    transform: translateY(-10px)scale(1.03);
+    box-shadow: 0 0 50px #01e0ca;
+  }
+
+  .project-item h2{
+    font-size: 2.5rem;
+  }
+  .project-item p{
+    font-size: 1.2rem;
+    line-height: 24px;
+    text-align: center;
+    color: rgb(219, 227, 234);
+  }
+
+
+
+  @media (max-width: 1279px){
+    .project .heading {
+      font-size: 4rem;
+    }
+    .project-item h2{
+      font-size: 1.9rem;
+      margin-top: -30px;
+    }
+    .project-item p {
+    font-size: 1rem;
+   
+    }
+  }
+
+  @media (max-width: 1139px){
+    .project .heading {
+      font-size: 4rem;
+    }
+    .project-item{
+      width: 150px;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+   
+   
+  }
+
+
+
+  @media (max-width: 1024px) {
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  
+    .project .heading {
+      font-size: 4rem;
+    }
+  
+    .project-item {
+      padding: 15px 25px;
+      width: 250px;
+    }
+  
+    .project-item h2 {
+      font-size: 1.8rem;
+    }
+  
+    .project-item p {
+      font-size: 0.95rem;
+     
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .project .heading {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  
+    .project-item {
+      padding: 15px 20px;
+    }
+  
+    .project-item h2 {
+      font-size: 1.6rem;
+    }
+  
+    .project-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project .heading {
+      font-size: 4rem;
+    }
+  
+    .project-item {
+      padding: 10px 15px;
+      margin: 0 auto;
+    }
+  
+    .project-item h2 {
+      font-size: 1.4rem;
+    }
+  
+    .project-item p {
+      font-size: 0.9rem;
+    }
+  }

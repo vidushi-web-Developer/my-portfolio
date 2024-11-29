@@ -1,0 +1,117 @@
+.about {
+  padding: 40px;
+  background-color: #131212;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 2px 2px 6px #ffffffdd;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgb(1, 224, 202);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(1, 224, 202);
+  text-shadow: 0 0 25px rgb(1, 224, 202), 0 0 50px rgb(1, 224, 202);
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 7px rgb(255, 255, 255);
+  margin-bottom: 10px;
+text-align: start;
+margin-left: 20px;
+}
+
+.timeline-content {
+  margin-left: 50px;
+  background: rgb(0, 0, 0);
+  padding: 30px 50px;
+  text-align: start;
+  color: white;
+  border: 3px solid rgb(1, 224, 202);
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgb(1, 224, 202);
+  cursor: pointer;
+  animation: fadeIn 0.8s ease;
+  transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgb(1, 224, 202);
+}
+.timeline-content h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.timeline-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.spanning{
+  text-shadow: 0px 0px 8px rgb(1, 224, 202);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+

@@ -1,0 +1,80 @@
+.service {
+    background: #131212;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .service h2 {
+    margin-bottom: 3rem;
+    color: #ffffff;
+    text-align: center;
+    font-size: 4rem;
+  }
+  
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+  }
+  
+  /* Service Box */
+  .service-box {
+    background: #01e0ca;
+    color: #131212;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 2rem;
+  }
+  
+  .service-box:hover {
+    background: #ffffff;
+    color: #01e0ca;
+    text-shadow: 2px 2px 8px blue;
+    border-color: #01e0ca;
+    transform: scale(1.05);
+  }
+  
+  /* Service Info */
+  .service-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .service-info h4 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .service-info h4:hover{
+    color: aqua;
+    text-shadow: 2px 2px 8px #e00101;
+  }
+  .service-info p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .service h2 {
+      font-size: 2rem;
+    }
+  
+    .service-info h4 {
+      font-size: 1.8rem;
+    }
+  
+    .service-info p {
+      font-size: 0.9rem;
+    }
+  }
+  

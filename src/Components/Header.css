@@ -1,0 +1,146 @@
+.container {
+  background-color: #07090e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 5%;
+  z-index: 100;
+  position: relative; /* Ensure positioning context for child elements */
+}
+
+.logo-div img {
+  display: flex;
+  margin-top: 10px;
+  height: 60px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.list-style {
+  display: flex;
+  list-style: none;
+  color: white;
+}
+
+.list-style ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.list-style li {
+  padding: 10px;
+}
+
+.list-style li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.list-style li a:hover {
+  color: aqua;
+}
+
+.head-btn {
+  width: 170px;
+  height: 50px;
+  padding: 12px 20px;
+  font-weight: 500;
+  border-radius: 1000px;
+  background: white;
+  color: black;
+  border: none;
+  outline: none;
+  margin-top: -10px;
+  font-size: 15px;
+}
+
+.head-btn:hover {
+  background-image: linear-gradient(#0f62fe, #0b47b8);
+  color: white;
+  transition: opacity 0.35s;
+  box-shadow: 0 8px 30px #0f5cf199, inset 0 2px #fff3;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: relative; /* Keeps the hamburger in normal flow */
+  z-index: 101; /* Ensures it is above the menu */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list-style {
+    display: none; /* Hide the menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Place it just below the container */
+    left: 0;
+    background-color: #07090e;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100; /* Ensure it's below the hamburger */
+  }
+
+  .list-style.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .list-style ul {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .list-style li {
+    padding: 15px 0;
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger menu on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-div img {
+    height: 50px;
+    width: 150px;
+  }
+
+  .list-style li a {
+    font-size: 14px;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+  }
+}
